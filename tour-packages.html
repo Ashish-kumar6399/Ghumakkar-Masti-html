@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghumakkar Masti Holidays</title>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!-- TailWind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fab icon -->
+    <link rel="icon " href="assets/image/swiftopay fabicon.png" type="image/png" sizes="16x16" />
+</head>
+
+<body class="bg-white ">
+
+   <!-- Top Bar -->
+   <div class="hidden md:flex bg-gradient-to-r from-blue-900 to-blue-500 text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex w-full justify-between items-center text-sm">
+      <!-- Left Side - Social Media Icons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#" class="hover:text-gray-300"><i class="fas fa-home"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+        <span class="text-gray-300">|</span>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Right Side - Contact Information -->
+      <div class="flex items-center space-x-3">
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919910112181" class="hover:text-gray-300">+91-9821325561</a>
+        </span>
+        <span class="text-gray-300">|</span>
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+917389475789" class="hover:text-gray-300">+91-8744878555</a>
+        </span>
+        <span class="text-gray-300">|</span>
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@worshipholidays.com" class="hover:text-gray-300">INFO@xxxxxxx.COM</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV BAR -->
+  <div class="  container  md:container p-2 lg:container p-0 m-auto ">
+    <nav class="bg-white  ">
+      <div class=" flex flex-wrap items-center justify-between  ">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3">
+          <img src="assets/image/logo-new.png" alt="Logo" class="h-20 md:h-20 lg:h-32 w-40 md:w-32 lg:w-64">
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button data-collapse-toggle="navbar-dropdown" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:ring-2 focus:ring-gray-200">
+          <span class="sr-only">Open main menu</span>
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="hidden w-full md:flex md:w-auto md:items-center" id="navbar-dropdown">
+          <ul class="flex flex-col md:flex-row md:space-x- lg:space-x-6 md:items-center text-sm lg:text-base">
+            <li><a href="/" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">HOME</a></li>
+            <li><a href="about.html" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">ABOUT-US</a></li>
+
+            <!-- Dropdown Menu -->
+            <li class="relative group">
+              <a href="#Packages">
+                <button class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600 flex items-center">
+                  PACKAGES
+                  <!-- <i class="fa-solid fa-caret-down ml-2 "></i> -->
+                </button>
+              </a>
+              <!-- <div class="absolute hidden bg-white shadow-lg group-hover:block mt-2 w-48 md:w-56">
+                <a href="#" class="block px-4 lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 1</a>
+                <a href="#" class="block px-4  lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 2</a>
+              </div> -->
+            </li>
+
+            <li><a href="cars.html" class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CARS</a></li>
+            <li><a href="contact-us.html"
+                class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CONTACT-US</a></li>
+
+            <!-- Enquiry Button -->
+            <li>
+              <button onclick="toggleModal()" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                ENQUIRY
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div id="queryModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm relative z-50">
+      <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-600">
+        <i class="fa-solid fa-times text-2xl"></i>
+      </button>
+      <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Get Quick Enquiry</h2>
+      <form id="myForm">
+        <input type="text" id="name" placeholder="Your Name"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="email" id="email" placeholder="Your Email"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="text" id="mobile" placeholder="Your Contact No"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="date" id="date"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <textarea id="message" placeholder="Leave a message here" rows="3"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required></textarea>
+        <label class="text-sm text-gray-600 flex items-center mb-3">
+          <input type="checkbox" class="mr-2"> I agree to get SMS/Email/Whatsapp from Ghumakkar Masti Representative.
+        </label>
+        <button type="submit"
+          class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Packages Section  Start -->
+    <div class="text-center my-10" id="Packages">
+        <p class="text-orange-500 font-semibold tracking-widest"></p>
+        <h2 class="text-3xl font-bold text-blue-900 mt-2">Kashmir Tour Packages</h2>
+        <h4 class=" px-4 lg:px-32 mt-[2%] text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+            quam, modi sequi voluptas natus, temporibus iure tenetur earum magni ut dolore quia nemo exercitationem
+            mollitia distinctio maxime consequuntur libero! Laudantium.
+            Exercitationem optio harum et minus vero laudantium iusto nostrum perferendis voluptates doloribus
+            laboriosam amet aspernatur obcaecati tempore placeat eos doloremque, a non iste itaque voluptatem quibusdam.
+            Cumque temporibus illo nobis!
+            Suscipit, autem fuga numquam blanditiis, maiores modi odit iste rem qui porro reprehenderit perferendis
+            nobis quibusdam, dolor omnis itaque. Magnam, natus eveniet voluptates perspiciatis aspernatur tempora?
+            Obcaecati corporis quo saepe.
+            Perferendis a asperiores quasi magnam accusamus deleniti repudiandae. Aperiam repellendus at odit fugiat
+            delectus tempore quaerat perspiciatis, animi pariatur voluptates! Culpa totam eveniet unde rem libero harum
+            enim? Natus, qui?</h4>
+
+    </div>
+
+    <div class="container mx-auto py-4 px-[5vw] xl:px-36  ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-[6vh]">
+            <!-- Card 1 -->
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Clickable Image -->
+                <div class="relative">
+                    <a href="kashmir.html">
+                        <img src="https://th.bing.com/th/id/OIP.Gb4KN3OvhW5UnqwpYFpb1AHaEK?rs=1&pid=ImgDetMain"
+                            alt="Tour Image" class="w-full h-[250px] object-cover">
+                    </a>
+                </div>
+            
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Kashmir Tour</h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 05 Days | Srinagar – Sonamarg – Pahalgam – Gulmarg</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+            
+                    <div class="flex gap-2 mt-3">
+                        <a href="kashmir.html" class="bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+                            BOOK NOW
+                        </a>
+                        <a href="kashmir.html" class="bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+                            DETAIL
+                        </a>
+                        <a href="https://wa.me/919821325561" target="_blank" 
+                            class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://cdn1.tripoto.com/media/filter/tst/img/1524784/Image/1585127333_d_and_g_1.jpg"
+                        alt="Tour Image" class="w-full h-[250px] object-cover">
+
+                    <!-- <span class="absolute bottom-3 right-3 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">4N</span> -->
+                </div>
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Kashmir Tour</h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 05 Days | Bagdogra-Siliguri-Darjeeling</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <!-- <p class="mt-2 text-lg font-bold text-orange-600">₹ 6,000 pp</p> -->
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+                    <div class="flex gap-2 mt-3">
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg">BOOK NOW</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg">DETAIL</button>
+                        <a href="https://wa.me/919821325561
+" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://www.ghumindiaghum.com/blog/wp-content/uploads/2022/08/andaman.jpg"
+                        alt="Tour Image" class="w-full h-[250px] object-cover">
+
+                    <!-- <span class="absolute bottom-3 right-3 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">9N</span> -->
+                </div>
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Kashmir Tour</h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 5 Days | Cellular Jail - Havelock Island-
+                        Elephnata
+                        Beach -Port Blair -CHIDIYATAPU</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <!-- <p class="mt-2 text-lg font-bold text-orange-600">₹ 17,800 pp</p> -->
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+                    <div class="flex gap-2 mt-3">
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg">BOOK NOW</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg">DETAIL</button>
+                        <a href="https://wa.me/919821325561
+" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://www.mountainmasti.com/uploads/1520077931-manali-tour-package.jpg" alt="Tour Image"
+                        class="w-full h-[250px] object-cover">
+
+                    <!-- <span class="absolute bottom-3 right-3 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">9N</span> -->
+                </div>
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800"> Kashmir Tour</h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 5 Days | Manali- Hadimba Devi temple-Solang
+                        Valley-Kullu</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <!-- <p class="mt-2 text-lg font-bold text-orange-600">₹ 17,800 pp</p> -->
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+                    <div class="flex gap-2 mt-3">
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg">BOOK NOW</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg">DETAIL</button>
+                        <a href="https://wa.me/919821325561
+" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://th.bing.com/th/id/OIP.Y5WwjMogEKKvrKTuCLURdAHaE8?w=600&h=400&rs=1&pid=ImgDetMain"
+                        alt="Tour Image" class="w-full h-[250px] object-cover">
+
+                    <!-- <span class="absolute bottom-3 right-3 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">9N</span> -->
+                </div>
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Kashmir Tour</h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 5 Days | Munnar - Thekkaday - Alleppey
+                        -Cochin</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <!-- <p class="mt-2 text-lg font-bold text-orange-600">₹ 17,800 pp</p> -->
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+                    <div class="flex gap-2 mt-3">
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg">BOOK NOW</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg">DETAIL</button>
+                        <a href="https://wa.me/919821325561
+" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative">
+                    <img src="https://www.toursandtaxi.com/wp-content/uploads/2021/11/delhi-agra-jaipur-tour.jpg"
+                        alt="Tour Image" class="w-full h-[250px] object-cover">
+
+                    <!-- <span class="absolute bottom-3 right-3 bg-blue-700 text-white px-3 py-1 rounded-full text-sm">9N</span> -->
+                </div>
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Kashmir Tour </h2>
+                    <p class="text-orange-600 font-bold text-sm">04 Nights / 5 Days | Grand Himachal – Amritsar</p>
+                    <p class="text-gray-600 text-sm">Hotel, Breakfast, Transfer, Sightseeing & All Taxes.</p>
+                    <!-- <p class="mt-2 text-lg font-bold text-orange-600">₹ 17,800 pp</p> -->
+                    <p class="text-green-600 text-sm">Best Service Guarantee</p>
+                    <div class="flex gap-2 mt-3">
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg">BOOK NOW</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg">DETAIL</button>
+                        <a href="https://wa.me/919821325561
+" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-green-600 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                             <span class=" hidden md:block"> WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Packages Section   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div id="queryModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm relative z-50">
+            <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-600">
+                <i class="fa-solid fa-times text-2xl"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Get Quick Enquiry</h2>
+            <form id="myForm">
+                <input type="text" id="name" placeholder="Your Name"
+                    class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    required>
+                <input type="email" id="email" placeholder="Your Email"
+                    class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    required>
+                <input type="text" id="mobile" placeholder="Your Contact No"
+                    class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    required>
+                <input type="date" id="date"
+                    class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    required>
+                <textarea id="message" placeholder="Leave a message here" rows="3"
+                    class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    required></textarea>
+                <label class="text-sm text-gray-600 flex items-center mb-3">
+                    <input type="checkbox" class="mr-2"> I agree to get SMS/Email/Call from Ghumakkar Masti
+                    Representative.
+                </label>
+                <button type="submit"
+                    class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">Send
+                    Message</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <!-- Column 1: About -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Ghumakkar Masti</h3>
+                <p class="text-gray-300 text-sm">
+                    Ghumakkar Masti is a trusted travel company based in Delhi, offering customized holiday packages
+                    across India. From Kashmir and Ladakh to Kerala and North-East tours, we specialize in religious,
+                    cultural, and adventure trips. With over 1000 successful trips, we are committed to providing
+                    seamless travel experiences and top-notch customer satisfaction.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">QUICK LINKS</h3>
+                <ul class="space-y-2 text-gray-300 text-lg">
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Home</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">About Us</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Contact Us</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Terms & Condition</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Privacy Poilicy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Services</h3>
+                <ul class="space-y-2 text-gray-300 text-lg">
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Kashmir Tour </a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Gangtok Tour</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Andaman Tour</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Kerala Tour</a></li>
+                    <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+                            class="hover:text-blue-400">Golden Traingle tour</a></li>
+                    <!-- <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="hover:text-blue-400">Airport Transfers</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">CONTACT US</h3>
+                <p class="text-gray-300 text-sm flex items-center">
+                    <span class="mr-2"><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:+919821325561" class="hover:text-blue-400">+91 9821325561</a>,
+                    <a href="tel:+918744878555" class="hover:text-blue-400">+91-8744878555</a>
+                </p>
+                <p class="text-gray-300 text-sm flex items-center">
+                    <span class="mr-2"><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:booking@ghumakkarmasti.com"
+                        class="hover:text-blue-400">booking@ghumakkarmasti.com</a>
+                </p>
+            </div>
+
+
+        </div>
+
+        <!-- Copyright & Developer Info -->
+        <div class="bg-gray-900 text-gray-400 text-sm py-4">
+            <div
+                class="max-w-7xl mx-auto px-2  lg:px-6 flex flex-col md:flex-row justify-between text-center md:text-left">
+                <p>Copyright © 2024 Ghumakkar Masti
+ All rights reserved</p>
+                <p>Designed and Developed by
+                    <a href="https://kanakdrishtiinfo.com/" target="blank" class="text-blue-400 hover:underline">Kanak
+                        Drishti
+                        Infotech</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function toggleModal() {
+            document.getElementById('queryModal').classList.toggle('hidden');
+        }
+
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                mobile: document.getElementById("mobile").value,
+                message: document.getElementById("message").value
+            };
+            console.log(formData);
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Port: 2525,
+                Username: "Aayush@kanakdrishtiinfo.com",
+                Password: "6840A9C5976DEAF5C3E30CA512FA91212D15",
+                To: 'Aayush@kanakdrishtiinfo.com',
+                From: "Aayush@kanakdrishtiinfo.com",
+                Subject: `Contact Us Form Submission`,
+                Body: `<b>First name:</b> ${formData.name}<br/><b>Email:</b> ${formData.email}<br/><b>Phone:</b> ${formData.mobile}<br/><b>Message:</b> ${formData.message}`
+            }).then(response => {
+                if (response === "OK") {
+                    console.error("Message Sent Successfully!", response);
+                    alert("Message Sent Successfully!", response.message);
+                    document.getElementById("myForm").reset();
+                    toggleModal();
+                } else {
+                    alert("Failed to send message. Please try again later.");
+                    console.error("Email sending failed:", response);
+                }
+            }).catch(error => {
+                console.error("Email sending error: ", error);
+                alert("There was an error sending the email.");
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="hidden md:flex bg-gradient-to-r from-blue-900 to-blue-500 text-white py-2 px-4">
+        <div class="max-w-7xl mx-auto flex w-full justify-between items-center text-sm">
+          <!-- Left Side - Social Media Icons -->
+          <div class="hidden md:flex items-center space-x-3">
+            <a href="#" class="hover:text-gray-300"><i class="fas fa-home"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+            <span class="text-gray-300">|</span>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+          </div>
+    
+          <!-- Right Side - Contact Information -->
+          <div class="flex items-center space-x-3">
+            <span class="flex items-center space-x-1">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+919910112181" class="hover:text-gray-300">+91-9821325561</a>
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="flex items-center space-x-1">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+917389475789" class="hover:text-gray-300">+91-8744878555</a>
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="flex items-center space-x-1">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@worshipholidays.com" class="hover:text-gray-300">INFO@xxxxxxx.COM</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- NAV BAR -->
+      <div class="  container  md:container p-2 lg:container p-0 m-auto ">
+        <nav class="bg-white  ">
+          <div class=" flex flex-wrap items-center justify-between  ">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+              <img src="assets/image/logo-new.png" alt="Logo" class="h-20 md:h-20 lg:h-32 w-40 md:w-32 lg:w-64">
+            </a>
+    
+            <!-- Mobile Menu Button -->
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:ring-2 focus:ring-gray-200">
+              <span class="sr-only">Open main menu</span>
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+    
+            <!-- Navbar Items -->
+            <div class="hidden w-full md:flex md:w-auto md:items-center" id="navbar-dropdown">
+              <ul class="flex flex-col md:flex-row md:space-x- lg:space-x-6 md:items-center text-sm lg:text-base">
+                <li><a href="/" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">HOME</a></li>
+                <li><a href="about.html" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">ABOUT-US</a></li>
+    
+                <!-- Dropdown Menu -->
+                <li class="relative group">
+                  <a href="#Packages">
+                    <button class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600 flex items-center">
+                      PACKAGES
+                      <!-- <i class="fa-solid fa-caret-down ml-2 "></i> -->
+                    </button>
+                  </a>
+                  <!-- <div class="absolute hidden bg-white shadow-lg group-hover:block mt-2 w-48 md:w-56">
+                    <a href="#" class="block px-4 lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 1</a>
+                    <a href="#" class="block px-4  lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 2</a>
+                  </div> -->
+                </li>
+    
+                <li><a href="cars.html" class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CARS</a></li>
+                <li><a href="contact-us.html"
+                    class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CONTACT-US</a></li>
+    
+                <!-- Enquiry Button -->
+                <li>
+                  <button onclick="toggleModal()" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                    ENQUIRY
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Modal -->
+      <div id="queryModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm relative z-50">
+          <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-600">
+            <i class="fa-solid fa-times text-2xl"></i>
+          </button>
+          <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Get Quick Enquiry</h2>
+          <form id="myForm">
+            <input type="text" id="name" placeholder="Your Name"
+              class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              required>
+            <input type="email" id="email" placeholder="Your Email"
+              class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              required>
+            <input type="text" id="mobile" placeholder="Your Contact No"
+              class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              required>
+            <input type="date" id="date"
+              class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              required>
+            <textarea id="message" placeholder="Leave a message here" rows="3"
+              class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+              required></textarea>
+            <label class="text-sm text-gray-600 flex items-center mb-3">
+              <input type="checkbox" class="mr-2"> I agree to get SMS/Email/Whatsapp from Ghumakkar Masti Representative.
+            </label>
+            <button type="submit"
+              class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">Send Message</button>
+          </form>
+        </div>
+      </div>
+ <!-- Hero Section -->
+ <section class="relative w-full h-64 md:h-80 lg:h-[60vh]  bg-cover bg-center bg-no-repeat " style="background-image: url('./assets/image/about us image.webp');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h1 class="text-white text-2xl sm:text-xl md:text-3xl font-bold ">ABOUT US</h1>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+
+    <section class="container mx-auto   bg-white mt-10 rounded-lg flex flex-col-reverse md:flex-row items-center">
+        <!-- Text Content -->
+        <div class="md:w-3/5 p-4  lg:px-20 ">
+            <h2 class="text-2xl font-bold mb-4  ">About Us</h2>
+            <p class=" text-justify leading-8">
+                Ghumakkar Masti is one of the Largest Destination Sellers Company in india.He is started a sell Small packages to large packages.he has Good Team to manage your Holidays packages in Your Budget.”This can be only done by GHumAKKAR MASTI”.Ghumakkar masti is very care to our Customers, till Date Ghumakkar Masti is Done more than 100 Groups and FIT Packages. Ghumakkar Masti is always take care of My Customers.Ghumakkar Masti offer 100% Transparency No Hidden Cost, 
+            </p>
+        </div>
+        <!-- Image Content -->
+        <div class="md:w-2/5 p-4 lg:p-6 flex justify-center">
+            <img src="./assets/image/about-us-image-2.webp"
+                alt="Car Image" class="rounded-lg shadow-lg">
+        </div>
+    </section>
+
+</body>
+
+</html>

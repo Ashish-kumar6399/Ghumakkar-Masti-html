@@ -281,3 +281,22 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
+
+
+
+
+  /* Custom Swiper Styles */
+/* Custom Pagination */
+.swiper-pagination-bullet {
+    background: white !important;
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    background: orange !important;
+    opacity: 1;
+    transform: scale(1.3);
+}

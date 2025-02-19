@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghumakkar Masti Holidays</title>
+
+  <!-- Flowbite CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- TailWind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fab icon -->
+  <link rel="icon " href="assets/image/swiftopay fabicon.png" type="image/png" sizes="16x16" />
+</head>
+
+<style>
+  /* Custom Navigation Button Styling */
+  .custom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .custom-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Left Button */
+  .custom-prev {
+    left: 40px;
+  }
+
+  /* Right Button */
+  .custom-next {
+    right: 40px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+
+    /* .custom-nav {
+          padding: 10px;
+      } */
+    .custom-prev {
+      left: 10px;
+    }
+
+    .custom-next {
+      right: 10px;
+    }
+  }
+
+
+  .owl-nav {
+    display: none
+  }
+</style>
+
+
+<body class="bg-white ">
+
+  <!-- Top Bar -->
+  <div class="hidden md:flex bg-gradient-to-r from-blue-900 to-blue-500 text-white py-2 px-4">
+    <div class="max-w-7xl mx-auto flex w-full justify-between items-center text-sm">
+      <!-- Left Side - Social Media Icons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="#" class="hover:text-gray-300"><i class="fas fa-home"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+        <span class="text-gray-300">|</span>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Right Side - Contact Information -->
+      <div class="flex items-center space-x-3">
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919910112181" class="hover:text-gray-300">+91-9821325561</a>
+        </span>
+        <span class="text-gray-300">|</span>
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+917389475789" class="hover:text-gray-300">+91-8744878555</a>
+        </span>
+        <span class="text-gray-300">|</span>
+        <span class="flex items-center space-x-1">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@worshipholidays.com" class="hover:text-gray-300">INFO@xxxxxxx.COM</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV BAR -->
+  <div class="  container  md:container p-2 lg:container p-0 m-auto ">
+    <nav class="bg-white  ">
+      <div class=" flex flex-wrap items-center justify-between  ">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3">
+          <img src="assets/image/logo-new.png" alt="Logo" class="h-20 md:h-20 lg:h-32 w-40 md:w-32 lg:w-64">
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button data-collapse-toggle="navbar-dropdown" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:ring-2 focus:ring-gray-200">
+          <span class="sr-only">Open main menu</span>
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="hidden w-full md:flex md:w-auto md:items-center" id="navbar-dropdown">
+          <ul class="flex flex-col md:flex-row md:space-x- lg:space-x-6 md:items-center text-sm lg:text-base">
+            <li><a href="/" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">HOME</a></li>
+            <li><a href="about.html" class="block py-2 lg:px-3 px-1 text-gray-700 hover:text-blue-600">ABOUT-US</a></li>
+
+            <!-- Dropdown Menu -->
+            <li class="relative group">
+              <a href="#Packages">
+                <button class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600 flex items-center">
+                  PACKAGES
+                  <!-- <i class="fa-solid fa-caret-down ml-2 "></i> -->
+                </button>
+              </a>
+              <!-- <div class="absolute hidden bg-white shadow-lg group-hover:block mt-2 w-48 md:w-56">
+                <a href="#" class="block px-4 lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 1</a>
+                <a href="#" class="block px-4  lg:px-1 py-2 text-gray-700 hover:bg-gray-100">Package 2</a>
+              </div> -->
+            </li>
+
+            <li><a href="cars.html" class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CARS</a></li>
+            <li><a href="contact-us.html"
+                class="block py-2 px-4 lg:px-1 text-gray-700 hover:text-blue-600">CONTACT-US</a></li>
+
+            <!-- Enquiry Button -->
+            <li>
+              <button onclick="toggleModal()" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                ENQUIRY
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div id="queryModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm relative z-50">
+      <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-600">
+        <i class="fa-solid fa-times text-2xl"></i>
+      </button>
+      <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Get Quick Enquiry</h2>
+      <form id="myForm">
+        <input type="text" id="name" placeholder="Your Name"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="email" id="email" placeholder="Your Email"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="text" id="mobile" placeholder="Your Contact No"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <input type="date" id="date"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required>
+        <textarea id="message" placeholder="Leave a message here" rows="3"
+          class="w-full px-4 py-2 mb-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:outline-none"
+          required></textarea>
+        <label class="text-sm text-gray-600 flex items-center mb-3">
+          <input type="checkbox" class="mr-2"> I agree to get SMS/Email/Whatsapp from Ghumakkar Masti Representative.
+        </label>
+        <button type="submit"
+          class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Home Page Auto Slider -->
+  <div id="home" class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide swiper-slide-1">
+
+        <img src="https://www.mistay.in/travel-blog/content/images/2020/06/cover-goa-mistay-hotel-rooms.jpg"
+          alt="Global Payment Integration" class="slide-image-1 w-full h-[30vh] md:h-[60vh]  lg:h-[60vh]" />
+      </div>
+
+
+      <!-- <div class="swiper-slide swiper-slide-1">
+
+        <img src="https://www.tajmahalinagra.com/wp-content/uploads/2021/12/golden-triangle-tour-india.jpg"
+          alt="Rocket Growth" class="slide-image-1 w-full h-[30vh] md:h-[60vh]  lg:h-[60vh]" />
+      </div>
+
+     
+      <div class="swiper-slide swiper-slide-3">
+
+        <img src="./assets/image/sara1739614758308.jpg" alt="Rocket Growth"
+          class="slide-image-1 w-full h-[30vh] md:h-[60vh] lg:h-[60vh]" />
+      </div>
+  
+      <div class="swiper-slide swiper-slide-3">
+
+        <img src="./assets/image/image2.webp" alt="Rocket Growth"
+          class="slide-image-1 w-full h-[30vh] md:h-[60vh] lg:h-[60vh]" />
+      </div>
+      <div class="swiper-slide swiper-slide-3">
+
+        <img src="./assets/image/image3.webp" alt="Rocket Growth"
+          class="slide-image-1 w-full h-[30vh] md:h-[60vh] lg:h-[60vh]" />
+      </div> -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="bg-gray-100 p-8">
+
+    <div class="container mx-auto flex flex-col md:flex-row justify-center gap-8">
+      <!-- Contact Information -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 text-center">CONTACT INFORMATION</h2>
+        <div class="w-20 h-1 bg-orange-500 mx-auto mt-1 mb-4"></div>
+
+        <div class="space-y-4 text-gray-700">
+          <p class="flex items-start"><i class="fas fa-map-marker-alt text-orange-500 mr-3 mt-1"></i>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex, velit aspernatur inventore pariatur
+            omnis iusto! Sequi, dolorem! Vel, est accusamus adipisci atque sit perspiciatis quaerat tenetur neque
+            eligendi eveniet?</p>
+
+          <p class="flex items-start"><i class="fas fa-map-marker-alt text-orange-500 mr-3 mt-1"></i>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque unde saepe placeat asperiores delectus,
+            recusandae hic nesciunt error libero exercitationem non accusantium mollitia. Dolore impedit similique sint
+            necessitatibus rerum aliquam?</p>
+
+          <p class="flex items-center"><i class="fas fa-phone-alt text-orange-500 mr-3"></i>
+            +91-99, +91-7385789</p>
+
+          <p class="flex items-center"><i class="fas fa-envelope text-orange-500 mr-3"></i>
+            booking@ghumakkarmasti.com</p>
+
+         
+        </div>
+      </div>
+
+      <!-- Get in Touch Form -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 text-center">GET IN TOUCH</h2>
+        <div class="w-20 h-1 bg-orange-500 mx-auto mt-1 mb-4"></div>
+
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+          <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+          <input type="text" placeholder="Your Contact No" class="w-full p-2 border rounded">
+          <textarea placeholder="Leave a message here" class="w-full p-2 border rounded"></textarea>
+
+          <div class="flex items-center">
+            <input type="checkbox" id="smsEmail" class="mr-2">
+            <label for="smsEmail" class="text-gray-700">I agree to get SMS/Email/Call from Worship Holidays
+              Representative.</label>
+          </div>
+
+          <button class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">Send
+            Message</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Column 1: About -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Ghumakkar Masti</h3>
+        <p class="text-gray-300 text-sm">
+          Ghumakkar Masti is a trusted travel company based in Delhi, offering customized holiday packages across India.
+          From Kashmir and Ladakh to Kerala and North-East tours, we specialize in religious, cultural, and adventure
+          trips. With over 1000 successful trips, we are committed to providing seamless travel experiences and
+          top-notch customer satisfaction.
+        </p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">QUICK LINKS</h3>
+        <ul class="space-y-2 text-gray-300 text-lg">
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Home</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">About Us</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Contact Us</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Terms & Condition</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Privacy Poilicy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Services</h3>
+        <ul class="space-y-2 text-gray-300 text-lg">
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Kashmir Tour </a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Gangtok Tour</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Andaman Tour</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Kerala Tour</a></li>
+          <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#"
+              class="hover:text-blue-400">Golden Traingle tour</a></li>
+          <!-- <li><i class="fa fa-angle-double-right text-white" aria-hidden="true"></i> <a href="#" class="hover:text-blue-400">Airport Transfers</a></li> -->
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">CONTACT US</h3>
+        <p class="text-gray-300 text-sm flex items-center">
+          <span class="mr-2"><i class="fa-solid fa-phone"></i></span>
+          <a href="tel:+919821325561" class="hover:text-blue-400">+91 9821325561</a>,
+          <a href="tel:+918744878555" class="hover:text-blue-400">+91-8744878555</a>
+        </p>
+        <p class="text-gray-300 text-sm flex items-center">
+          <span class="mr-2"><i class="fa-solid fa-envelope"></i></span>
+          <a href="mailto:booking@ghumakkarmasti.com" class="hover:text-blue-400">booking@ghumakkarmasti.com</a>
+        </p>
+      </div>
+
+
+    </div>
+
+    <!-- Copyright & Developer Info -->
+    <div class="bg-gray-900 text-gray-400 text-sm py-4">
+      <div class="max-w-7xl mx-auto px-2  lg:px-6 flex flex-col md:flex-row justify-between text-center md:text-left">
+        <p>Copyright © 2024 Ghumakkar Masti
+          All rights reserved</p>
+        <p>Designed and Developed by
+          <a href="https://kanakdrishtiinfo.com/" target="blank" class="text-blue-400 hover:underline">Kanak Drishti
+            Infotech</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- jQuery (Required for Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+  <script>
+    function toggleModal() {
+      document.getElementById('queryModal').classList.toggle('hidden');
+    }
+
+    document.getElementById("myForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        mobile: document.getElementById("mobile").value,
+        message: document.getElementById("message").value
+      };
+      console.log(formData);
+
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Port: 2525,
+        Username: "Aayush@kanakdrishtiinfo.com",
+        Password: "6840A9C5976DEAF5C3E30CA512FA91212D15",
+        To: 'Aayush@kanakdrishtiinfo.com',
+        From: "Aayush@kanakdrishtiinfo.com",
+        Subject: `Contact Us Form Submission`,
+        Body: `<b>First name:</b> ${formData.name}<br/><b>Email:</b> ${formData.email}<br/><b>Phone:</b> ${formData.mobile}<br/><b>Message:</b> ${formData.message}`
+      }).then(response => {
+        if (response === "OK") {
+          console.error("Message Sent Successfully!", response);
+          alert("Message Sent Successfully!", response.message);
+          document.getElementById("myForm").reset();
+          toggleModal();
+        } else {
+          alert("Failed to send message. Please try again later.");
+          console.error("Email sending failed:", response);
+        }
+      }).catch(error => {
+        console.error("Email sending error: ", error);
+        alert("There was an error sending the email.");
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
